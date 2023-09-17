@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cardview_id">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--linear layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--            Imageview -->
+                <ImageView
+                    android:id="@+id/product_img_id"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="6dp"
+                    android:background="#2d2d2d"
+                    android:scaleType="centerCrop" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/product_title_id"
+
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="left"
+                        android:text="Title"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/product_des_id"
+
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="left"
+                        android:inputType="textMultiLine"
+                        android:text="Description"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/product_quantity_id"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:text="Quantity"
+
+                        android:textSize="15sp" />
+
+                    <!--            purchase layout-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/productpurchased"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/black"
+                            android:text="Purchased"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/productpurchasedstatus"
+
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/black"
+                            android:text="No"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+
+                    <!-- Price layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/product_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left|bottom"
+                            android:text="Price :"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/product_price_id"
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left|bottom"
+                            android:text="30000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--        different button layout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--        location-->
+
+                <ImageView
+
+                    android:id="@+id/productlistmap"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_map"
+                    android:padding="5dp" />
+
+                <ImageView
+
+                    android:id="@+id/productlistedit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ic_edit"
+                    android:padding="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--message-->
+        <ImageView
+            android:id="@+id/productlistsms"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/share"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

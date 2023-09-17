@@ -9,35 +9,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.holidayplannerapp.Activity.MapActivity;
 import com.example.holidayplannerapp.Activity.UpdateProductActivity;
-import com.example.holidayplannerapp.Database.Database;
 import com.example.holidayplannerapp.Activity.SmsActivity;
 import com.example.holidayplannerapp.Model.ProductDataModel;
 import com.example.holidayplannerapp.R;
-
 import java.util.ArrayList;
 
 public class ManageProductAdapter extends RecyclerView.Adapter<ManageProductAdapter.ViewHolder> {
 
     Context context;
     ArrayList<ProductDataModel> arrayList;
-    ProductDataModel pdm;
-
 
     public ManageProductAdapter(Context context, ArrayList<ProductDataModel> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
-
-
     }
-
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView producttitle, productdes, productprice, productquantity;
@@ -57,30 +47,41 @@ public class ManageProductAdapter extends RecyclerView.Adapter<ManageProductAdap
             productcardview = itemView.findViewById(R.id.cardview_id);
             pmap = itemView.findViewById(R.id.productlistmap);
             psms = itemView.findViewById(R.id.productlistsms);
-
-
         }
     }
 
     @NonNull
     @Override
     public ManageProductAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.design_product_recyclerview, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.sin_layout, parent, false);
         ManageProductAdapter.ViewHolder viewHolder = new ManageProductAdapter.ViewHolder(v);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Database db = new Database(context);
+        if (arrayList == null || position < 0 || position >= arrayList.size()) {
+            return; // Add appropriate error handling if needed
+        }
+
         ProductDataModel pdm = arrayList.get(position);
 
         holder.producttitle.setText(pdm.getProductname());
         holder.productdes.setText(pdm.getProductdescription());
         holder.productprice.setText(String.valueOf(pdm.getProductprice()));
         holder.productquantity.setText(String.valueOf(pdm.getProductquantity()));
-        Bitmap ImageDataInBitmap = BitmapFactory.decodeByteArray(pdm.getProductimage(), 0, pdm.getProductimage().length);
-        holder.productimage.setImageBitmap(ImageDataInBitmap);
+
+        Bitmap imageDataInBitmap = null;
+        if (pdm.getProductimage() != null && pdm.getProductimage().length > 0) {
+            imageDataInBitmap = BitmapFactory.decodeByteArray(pdm.getProductimage(), 0, pdm.getProductimage().length);
+        }
+
+        if (imageDataInBitmap != null) {
+            holder.productimage.setImageBitmap(imageDataInBitmap);
+        } else {
+            // Use a placeholder image or show a default image
+            holder.productimage.setImageResource(R.drawable.ic_product);
+        }
 
         if (pdm.getProductstatus() < 0) {
             holder.productstatusbox.setText("No");
@@ -100,8 +101,6 @@ public class ManageProductAdapter extends RecyclerView.Adapter<ManageProductAdap
             context.startActivity(imap);
         });
 
-
-
         holder.pedit.setOnClickListener(view -> {
             Intent imap = new Intent(context, UpdateProductActivity.class);
             imap.putExtra("productid", pdm.getProductcategoryid());
@@ -113,5 +112,4 @@ public class ManageProductAdapter extends RecyclerView.Adapter<ManageProductAdap
     public int getItemCount() {
         return arrayList.size();
     }
-
 }
