@@ -61,7 +61,7 @@ public class UpdateProductActivity extends AppCompatActivity implements OnMapRea
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_product);
+        setContentView(R.layout.activity_product_update);
         id = getIntent().getExtras().getInt("productid");
         catid = getIntent().getExtras().getInt("pcid");
         db = new Database(this);

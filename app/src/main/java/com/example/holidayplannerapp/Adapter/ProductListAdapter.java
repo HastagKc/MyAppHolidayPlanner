@@ -26,12 +26,12 @@ import java.util.ArrayList;
 
 
 
-
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ViewHolder> {
 
     Context context;
     ArrayList<ProductDataModel> arrayList;
     ProductDataModel pdm;
+
     public ProductListAdapter(Context context, ArrayList<ProductDataModel> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
