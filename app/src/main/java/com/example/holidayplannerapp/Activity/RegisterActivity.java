@@ -121,6 +121,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(RegisterActivity.this, "Redirecting to Login", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                finish();
             }
         });
     }
@@ -129,5 +130,6 @@ public class RegisterActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
+        finish();
     }
 }

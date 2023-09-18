@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_id"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/cardview_id">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +24,7 @@
                 <ImageView
                     android:id="@+id/product_img_id"
                     android:layout_width="100dp"
-                    android:layout_height="150dp"
+                    android:layout_height="185dp"
                     android:layout_margin="6dp"
                     android:background="#2d2d2d"
                     android:scaleType="centerCrop" />
@@ -124,42 +126,48 @@
 
             </LinearLayout>
             <!--        different button layout -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
-                <!--        location-->
-
-                <ImageView
-
-                    android:id="@+id/productlistmap"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/ic_map"
-                    android:padding="5dp" />
-
-                <ImageView
-
-                    android:id="@+id/productlistedit"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/ic_edit"
-                    android:padding="5dp" />
-            </LinearLayout>
         </LinearLayout>
-        <!--message-->
-        <ImageView
-            android:id="@+id/productlistsms"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/share"
-            android:padding="5dp" />
+            android:orientation="vertical">
+
+            <!--message-->
+            <ImageView
+                android:id="@+id/productlistsms"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/share"
+                android:padding="5dp" />
+
+            <!--        location-->
+
+            <ImageView
+
+                android:id="@+id/productlistmap"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_map"
+                android:padding="5dp" />
+
+            <ImageView
+
+                android:id="@+id/productlistedit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_edit"
+                android:padding="5dp" />
+        </LinearLayout>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

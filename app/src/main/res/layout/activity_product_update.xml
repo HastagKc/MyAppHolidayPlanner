@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+        <!--    toolbar-->
+        <LinearLayout
+            android:id="@+id/utoptoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/colorPurple">
+
+            <ImageView
+                android:id="@+id/ubackimgf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left|center"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/ic_arrow_back"
+                android:contentDescription="TODO" />
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--    body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <!--        left side -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/productupdateimageid"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/product_imageview_design"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/productlinear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/productupdatefromgallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="from Gallery"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productupdatefromcamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:text="from Camera"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--        right side -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Product Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productupdatetitleidlayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/productupdatetitleid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:minHeight="45dp"
+                        android:padding="5dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--            description -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productuodatedesidlayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/productuodatedesid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:inputType="textPersonName"
+                        android:minHeight="45dp"
+                        android:padding="5dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Product Price -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productupdatepriceidlayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/productupdatepriceid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Price"
+                        android:inputType="number"
+                        android:minHeight="45dp"
+                        android:padding="5dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--  Product Quantity -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/productupdatequantityidlayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/productupdatequantityid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Quantity"
+                        android:inputType="number"
+                        android:minHeight="45dp"
+                        android:padding="5dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp">
+
+            <fragment
+                android:id="@+id/google_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/product_imageview_design" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/productupdatebtnLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/productupdatebtnid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Product" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/productcalcelbtnid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Cancel" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
