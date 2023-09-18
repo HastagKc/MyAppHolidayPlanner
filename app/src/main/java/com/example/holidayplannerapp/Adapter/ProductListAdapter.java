@@ -1,5 +1,6 @@
 package com.example.holidayplannerapp.Adapter;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,28 +10,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.holidayplannerapp.Activity.MapActivity;
-import com.example.holidayplannerapp.Activity.UpdateProductActivity;
 import com.example.holidayplannerapp.Activity.SmsActivity;
+import com.example.holidayplannerapp.Activity.UpdateProductActivity;
 import com.example.holidayplannerapp.Model.ProductDataModel;
 import com.example.holidayplannerapp.R;
 
 import java.util.ArrayList;
-
-
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ViewHolder> {
 
     Context context;
     ArrayList<ProductDataModel> arrayList;
     ProductDataModel pdm;
+
 
     public ProductListAdapter(Context context, ArrayList<ProductDataModel> arrayList) {
         this.context = context;
@@ -90,12 +88,14 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
             imap.putExtra("productid", pdm.getProductid());
             imap.putExtra("productname", pdm.getProductname());
             context.startActivity(imap);
+
         });
 
         holder.psms.setOnClickListener(view -> {
             Intent imap = new Intent(context, SmsActivity.class);
             imap.putExtra("productid", pdm.getProductid());
             context.startActivity(imap);
+
         });
 
 

@@ -42,21 +42,17 @@ public class ProductListActivity extends AppCompatActivity {
     Database db = new Database(this);
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
-
         backtocategoryy = findViewById(R.id.backtocategory);
         addnewproduct = findViewById(R.id.productactivityaddbtn);
         productname = findViewById(R.id.productshowname);
         totalpurchasedprice = findViewById(R.id.totalpurchasedprice);
         totaltobuyprice = findViewById(R.id.totaltobuyprice);
-        searchView =  findViewById(R.id.productsearchBar);
+        searchView = findViewById(R.id.productsearchBar);
         CharSequence query = searchView.getQuery();
-
 
 
         //change notification color
@@ -102,7 +98,6 @@ public class ProductListActivity extends AppCompatActivity {
         backtocategoryy.setOnClickListener(v -> {
             redirecttocategory();
         });
-
 
 
         //method to calcualte price
@@ -169,7 +164,7 @@ public class ProductListActivity extends AppCompatActivity {
                     .addSwipeLeftActionIcon(R.drawable.ic_delete)
                     .setSwipeLeftActionIconTint(getResources().getColor(R.color.colorWhite))
                     .addSwipeLeftBackgroundColor(getResources().getColor(R.color.colorRed))
-                    .addSwipeRightLabel("Purchase")
+                    .addSwipeRightLabel("purchased or tobuy")
                     .setSwipeRightLabelColor(getResources().getColor(R.color.colorWhite))
                     .addSwipeRightActionIcon(R.drawable.ic_purchase)
                     .setSwipeRightActionIconTint(getResources().getColor(R.color.colorWhite))
@@ -207,7 +202,7 @@ public class ProductListActivity extends AppCompatActivity {
         startActivity(new Intent(ProductListActivity.this, DashboardActivity.class));
     }
 
-    public void recyclerupdate(){
+    public void recyclerupdate() {
         adapter = new ProductListAdapter(this, alldata);
 
         //add adapter to view
@@ -218,5 +213,6 @@ public class ProductListActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(ProductListActivity.this, DashboardActivity.class);
         startActivity(intent);
+        finish();
     }
 }

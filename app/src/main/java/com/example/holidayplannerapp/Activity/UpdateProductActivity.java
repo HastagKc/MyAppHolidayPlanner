@@ -240,5 +240,6 @@ public class UpdateProductActivity extends AppCompatActivity implements OnMapRea
         Intent intent = new Intent(UpdateProductActivity.this, ProductListActivity.class);
         intent.putExtra("pcid", pdm.get(0).getProductcategoryid());
         startActivity(intent);
+        finish();
     }
 }
