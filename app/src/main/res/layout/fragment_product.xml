@@ -13,7 +13,8 @@
         android:id="@+id/pruductmanagerecy"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@color/backgroundColor"
        />
 
     <LinearLayout
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:background="@color/btnColor"
             android:text="Purchased Item" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -36,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:background="@color/btnColor"
             android:text="Unpurchased Item" />
     </LinearLayout>
 

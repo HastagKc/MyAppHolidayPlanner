@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white"
+        android:background="@color/backgroundColor"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/layout_header"
         app:menu="@menu/menu" />

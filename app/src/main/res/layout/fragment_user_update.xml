@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
@@ -128,8 +129,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16sp"
+        android:background="@color/btnColor"
         android:padding="10dp"
-        android:text="Update" />
+        android:text="Update"
+        android:textColor="@color/colorWhite" />
 
     <!--back btn -->
     <androidx.appcompat.widget.AppCompatButton
@@ -137,8 +140,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16sp"
+        android:background="@color/btnColor"
         android:padding="10dp"
-        android:text="Back" />
+        android:text="Back"
+        android:textColor="@color/colorWhite" />
 
 
 </LinearLayout>

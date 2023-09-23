@@ -37,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
         //change notification color
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorPurple));
+            window.setStatusBarColor(this.getResources().getColor(R.color.backgroundColor));
         }
 
 

@@ -8,7 +8,6 @@
     android:layout_gravity="center"
     android:elevation="50dp"
     android:padding="10dp"
-    app:cardBackgroundColor="@color/grey"
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp">
 
@@ -16,7 +15,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:background="#464C57">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/image_li"
@@ -46,6 +46,7 @@
             android:singleLine="true"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold" />
 
 
