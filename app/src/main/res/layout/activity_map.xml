@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
 
     <!--    toolbar design-->
     <LinearLayout
         android:id="@+id/mtoptoolbar"
         android:layout_width="match_parent"
         android:layout_height="53dp"
-        android:background="@color/colorPurple"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/appbarColor"
+
+    >
 
         <ImageView
             android:id="@+id/mbackimgf"
@@ -32,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="10dp"
+        >
 
         <TextView
             android:id="@+id/productnameformapdrp"

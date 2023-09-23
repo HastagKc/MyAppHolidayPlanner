@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.AddProductActivity">
+    tools:context=".Activity.AddProductActivity"
+    android:background="@color/backgroundColor">
 
     <!--    toolbar-->
     <LinearLayout
         android:id="@+id/toptoolbar"
         android:layout_width="match_parent"
         android:layout_height="53dp"
-        android:background="@color/colorPurple">
+        android:background="@color/appbarColor">
 
         <!--        toolbar image  -->
         <ImageView

@@ -64,7 +64,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         // Change notification color
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
-            window.setStatusBarColor(getResources().getColor(R.color.colorPurple));
+            window.setStatusBarColor(getResources().getColor(R.color.appbarColor));
         }
 
         productname = findViewById(R.id.showselectedproduct);

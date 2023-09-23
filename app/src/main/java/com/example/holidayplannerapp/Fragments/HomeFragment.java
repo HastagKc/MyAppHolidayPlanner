@@ -95,7 +95,7 @@ public class HomeFragment extends Fragment {
 
     //method to add new category
     private void addnewcategorydailoge() {
-        AlertDialog.Builder addcat = new AlertDialog.Builder(getActivity(), R.style.HolidayPlanner);
+        AlertDialog.Builder addcat = new AlertDialog.Builder(getActivity(), R.style.HolidayPlannerEdit);
 
         View viewalert = LayoutInflater.from(getActivity()).inflate(R.layout.alertdialoge_category, null);
         cataddgallery = viewalert.findViewById(R.id.cataddfromgallery);

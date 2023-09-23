@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         // Change notification color
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorWhite));
+            window.setStatusBarColor(this.getResources().getColor(R.color.backgroundColor));
         }
 
         Blogin.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
                 // Check if there is an active internet connection
                 if (NetworkUtil.isNetworkAvailable(LoginActivity.this)) {
                     // Internet connection is available
-                    // Proceed with login logic
 
                     // Converted edittext to string
                     email = Eemail.getText().toString();
@@ -91,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                finish();
             }
         });
     }

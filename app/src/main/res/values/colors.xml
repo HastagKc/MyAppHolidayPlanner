@@ -15,9 +15,17 @@
     <color name="solidCircle">#AAFFFFFF</color>
     <color name="circleBorder">#50FFFFFF</color>
     <color name="backColBtn">#50FFFFFF</color>
-    <color name="grey">#92B7BC</color>
-    <color name="colorPurple">#3F1A81</color>
 
-    <color name="colorDialogBox">#6A6767</color>
+    <color name="colorDialogBox">#8AB4B9</color>
+
+    <color name="backgroundColor">#6A686E</color>
+    <color name="belowBtnColor">#074039</color>
+    <color name="profileBackColor">#060F22</color>
+    <color name="appbarColor">#060F22</color>
+    <color name="itemColor">#607BB1</color>
+    <color name="bottomToolbar">#2F3D5A</color>
+
+    <color name="btnColor">#353333</color>
+
 
 </resources>
